@@ -57,7 +57,7 @@ const Hero = () => {
           spacing={3}
         >
           <Heading as="h1" size="lg">
-            Hi, I’m Lazar Nikolov.
+            Hi, I’m Sarmad Gardezi.
           </Heading>
           <HeroPlay />
         </Stack>
