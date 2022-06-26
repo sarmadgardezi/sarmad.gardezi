@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "theme": "npx @chakra-ui/cli tokens src/theme/index.ts --out node_modules/@chakra-ui/styled-system/dist/types/theming.types.d.ts"
