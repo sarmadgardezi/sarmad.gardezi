@@ -1,3 +1,4 @@
+
 const OLD_BLOG_URL = 'https://hn.nikolovlazar.com';
 const oldBlogPosts = [
   '/portfolio-beef-1-free-designs-for-beginner-front-end-developers',
@@ -10,8 +11,8 @@ const oldBlogPosts = [
   '/how-to-render-your-website',
 ];
 
-module.exports = {
-  swcMinify: true,
+const moduleExports = {
+  swcMinify: false,
   images: {
     domains: [
       'img.youtube.com',
