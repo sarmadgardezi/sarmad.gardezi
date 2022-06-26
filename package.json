@@ -8,6 +8,7 @@
     "theme": "npx @chakra-ui/cli tokens src/theme/index.ts --out node_modules/@chakra-ui/styled-system/dist/types/theming.types.d.ts"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.2",
     "@chakra-ui/react": "2.0.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",

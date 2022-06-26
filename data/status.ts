@@ -1,6 +1,6 @@
 const status = {
   emoji: '🤓',
-  text: 'Reading Developer Relations',
+  text: 'Full Stack Freelance Developer',
 };
 
 export default status;

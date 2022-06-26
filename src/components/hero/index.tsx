@@ -57,17 +57,17 @@ const Hero = () => {
           spacing={3}
         >
           <Heading as="h1" size="lg">
-            Hi, I’m Lazar Nikolov.
+            Hi, I’m Sarmad Gardezi.
           </Heading>
           <HeroPlay />
         </Stack>
         <Text as="h2" lineHeight="175%">
           I’m a full-stack engineer, a designer, and a content creator. I work
-          at <ExternalLink href="https://codechem.com">CodeChem</ExternalLink>{' '}
+          at <ExternalLink href="https://zeuzmedia.com">Zeuz Media</ExternalLink>{' '}
           as a <strong>developer/designer</strong>, and I’m a{' '}
           <strong>core member</strong> at{' '}
-          <ExternalLink href="https://chakra-ui.com">Chakra UI</ExternalLink>,
-          contributing as a <strong>Developer Advocate</strong>. I’m also an{' '}
+          <ExternalLink href="https://gdgcloudislamabad.com">GDG Cloud isb</ExternalLink>,
+          contributing as a <strong>Social Media Advisor</strong>. I’m also an{' '}
           <ExternalLink href="https://egghead.io">egghead.io</ExternalLink>{' '}
           <strong>instructor</strong>.
         </Text>
