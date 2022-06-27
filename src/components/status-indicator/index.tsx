@@ -4,9 +4,9 @@ import {
   Text,
   useBreakpointValue,
   useColorModeValue as mode,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-import status from '@/data/status';
+import status from "../../data/status";
 
 const StatusIndicator = () => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
@@ -15,70 +15,64 @@ const StatusIndicator = () => {
 
   if (isMobile) {
     stackStyles = {
-      width: 10,
-      shadow: 'lg',
+      width: "fit-content",
+      shadow: "lg",
       spacing: 3,
     };
   } else {
     stackStyles = {
       width: 10,
-      shadow: 'none',
+      shadow: "none",
       spacing: 0,
     };
   }
 
   return (
     <HStack
+      _hover={{
+        width: "fit-content",
+        shadow: "lg",
+      }}
       position="absolute"
+      overflow="hidden"
       bottom={0}
+      marginLeft="auto"
+      borderWidth={1}
+      borderColor={mode("gray.300", "gray.600")}
+      borderStyle="solid"
+      height={10}
       alignItems="center"
       justifyContent="center"
-      overflow="hidden"
-      h={10}
-      ml="auto"
-      px={2}
-      bg={mode('white', 'gray.800')}
-      borderWidth={1}
-      borderStyle="solid"
-      borderColor={mode('gray.300', 'gray.600')}
-      _hover={{
-        width: 'max-content',
-        maxWidth: 'unset',
-        shadow: 'lg',
-      }}
-      role="group"
+      bg={mode("white", "gray.800")}
       rounded="3xl"
-      spacing={0}
-      transitionDuration="slow"
+      px={2}
+      role="group"
       transitionProperty="all"
+      transitionDuration="slow"
       transitionTimingFunction="ease-out"
       {...stackStyles}
     >
       <Text>{status.emoji}</Text>
       <Text
+        isTruncated
+        width={0}
+        maxWidth="full"
+        opacity={0}
+        transitionProperty="opacity"
+        transitionDuration="slow"
+        transitionTimingFunction="ease-out"
+        _groupHover={{
+          opacity: 1,
+          width: "fit-content",
+          marginLeft: 3,
+        }}
         sx={{
-          '@media(hover: none)': {
+          "@media(hover: none)": {
             opacity: 1,
-            width: 'max-content',
+            width: "fit-content",
             marginLeft: 3,
           },
         }}
-        display="none"
-        overflow="hidden"
-        w={0}
-        maxW="full"
-        opacity={0}
-        _groupHover={{
-          opacity: 1,
-          width: 'max-content',
-          marginLeft: 3,
-          display: 'initial',
-        }}
-        whiteSpace="nowrap"
-        textOverflow="ellipsis"
-        transitionDuration="slow"
-        transitionProperty="opacity"
-        transitionTimingFunction="ease-out"
       >
         {status.text}
       </Text>

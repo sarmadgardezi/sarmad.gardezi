@@ -19,10 +19,11 @@
       "@/types/*": ["src/types/*"],
       "@/utils/*": ["src/utils/*"],
       "@/db": ["db/index.ts"],
-      "@/data/*": ["data/*"]
+      "@/data/*": ["data/*"],
+      "@/*": ["./*"]
     },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_error.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

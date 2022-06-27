@@ -3,5 +3,4 @@ export type BlogPost = {
   description: string;
   date: string;
   slug: string;
-  readingTime: string;
 };

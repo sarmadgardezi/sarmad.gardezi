@@ -12,18 +12,18 @@ const ExternalLink = ({ children, ...linkProps }: LinkProps) => {
     <span>
       <Link
         {...linkProps}
-        alignItems="center"
-        display="inline-flex"
         color={mode('purple.500', 'purple.300')}
+        display='inline-flex'
+        alignItems='center'
         isExternal
-        target="_blank"
+        target='_blank'
       >
         {children}
       </Link>
       <Icon
         as={FiArrowUpRight}
-        display="inline"
         color={mode('gray.700', 'white')}
+        display='inline'
       />
     </span>
   );

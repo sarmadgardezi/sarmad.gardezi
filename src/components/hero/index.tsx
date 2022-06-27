@@ -6,39 +6,31 @@ import {
   Button,
   Icon,
   Link,
+  Grid,
 } from '@chakra-ui/react';
 import { FiArrowUpRight } from 'react-icons/fi';
-
+import HeroImage from './hero-image';
+import { Link as LinkType } from "@/types/link";
 import {
-  GITHUB_PROFILE,
-  POLYWORK_PROFILE,
-  TWITCH_CHANNEL,
-  TWITTER_PROFILE,
-} from 'src/constants';
-import { Link as LinkType } from '@/types/link';
-import ExternalLink from '../external-link';
-import HeroImage from '../hero-image';
-import HeroPlay from '../hero-play';
+  GITHUB_PROFILE, TWITCH_CHANNEL,
+  TWITTER_PROFILE
+} from "src/constants";
+import ExternalLink from "../external-link";
 
 type SocialLink = LinkType & { color?: string };
 
 const socialLinks: SocialLink[] = [
   {
     href: TWITTER_PROFILE,
-    label: 'Twitter',
-    color: 'twitter',
+    label: "Twitter",
+    color: "twitter",
   },
   {
     href: GITHUB_PROFILE,
-    label: 'GitHub',
+    label: "GitHub",
   },
-  {
-    href: POLYWORK_PROFILE,
-    label: 'Polywork',
-    color: 'purple.500',
-  },
+ 
 ];
-
 const Hero = () => {
   return (
     <Stack
@@ -59,10 +51,9 @@ const Hero = () => {
           <Heading as="h1" size="lg">
             Hi, I’m Sarmad Gardezi.
           </Heading>
-          <HeroPlay />
         </Stack>
         <Text as="h2" lineHeight="175%">
-          I’m a full-stack engineer, a designer, and a content creator. I work
+        I’m a full-stack engineer, a designer, and a content creator. I work
           at <ExternalLink href="https://zeuzmedia.com">Zeuz Media</ExternalLink>{' '}
           as a <strong>developer/designer</strong>, and I’m a{' '}
           <strong>core member</strong> at{' '}
@@ -71,23 +62,28 @@ const Hero = () => {
           <ExternalLink href="https://egghead.io">egghead.io</ExternalLink>{' '}
           <strong>instructor</strong>.
         </Text>
-        <Stack direction={{ base: 'column', md: 'row' }} spacing={3}>
+        <Grid gap={{ base: 3, lg: 6 }}
+                templateColumns={{
+                  base: "repeat(2, 1fr)",
+                  md: "repeat(4, 1fr)",
+                }}
+                width={{ base: "100%" }}>
           {socialLinks.map(({ href, label, color }) => (
             <Button
               key={href}
               as={Link}
-              justifyContent={{ base: 'flex-start', md: 'center' }}
-              px={4}
+              variant="ghost"
               color={color}
               href={href}
-              rightIcon={<Icon as={FiArrowUpRight} />}
               target="_blank"
-              variant="ghost"
+              px={4}
+              justifyContent={{ base: "center", md: "center" }}
+              rightIcon={<Icon as={FiArrowUpRight} />}
             >
               {label}
             </Button>
           ))}
-        </Stack>
+        </Grid>
       </VStack>
       <HeroImage />
     </Stack>

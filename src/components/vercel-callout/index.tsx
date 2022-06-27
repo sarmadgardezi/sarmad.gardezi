@@ -3,15 +3,15 @@ import { Link } from '@chakra-ui/react';
 const VercelCallout = () => {
   return (
     <Link
-      display="inline-block"
-      fontSize="xs"
-      fontWeight="semibold"
-      _hover={{ textDecoration: 'none' }}
-      href="https://vercel.com"
+      href='https://vercel.com'
       isExternal
+      fontSize='xs'
+      fontWeight='semibold'
+      display='inline-block'
+      _hover={{ textDecoration: 'none' }}
     >
       Powered by{' '}
-      <span role="img" aria-label="Vercel logo">
+      <span role='img' aria-label='Vercel logo'>
         ▲
       </span>{' '}
       Vercel
