@@ -5,6 +5,7 @@
     "dev": "next dev",
     "build": "next build",
   "postbuild": "next-sitemap",
+  "type": "module",
     "start": "next start",
     "lint": "next lint"
   },
