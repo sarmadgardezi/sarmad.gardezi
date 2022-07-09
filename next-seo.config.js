@@ -1,9 +1,21 @@
-const title = "Sarmad Gardezi - Freelance Developer";
-const description = "Designer, tech enthusiast and entrepreneur of sorts";
+const title = "Sarmad Gardezi";
+const description = "Designer, tech enthusiast and entrepreneur from Islamabad, Pakistan";
+
+const image = {
+  images: {
+    domains: [
+      'img.youtube.com',
+      'sarmadgardeziblog.files.wordpress.com',
+    ],
+  },
+ 
+};
 
 const SEO = {
   title,
   description,
+  titleTemplate: "Sarmad Gardezi - A Full Stack Developer",
+  defaultTitle: "Sarmad Gardezi",
   canonical: "https://sarmadgardezi.com",
   openGraph: {
     type: "website",
@@ -21,7 +33,7 @@ const SEO = {
     ],
   },
   twitter: {
-    handle: "@sarmadgardezi",
+    handle: "@SarmadGardezi",
     site: "@sarmadgardezi",
     cardType: "summary_large_image",
   },

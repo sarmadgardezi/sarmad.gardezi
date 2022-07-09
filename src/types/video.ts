@@ -1,5 +1,8 @@
 export type Video = {
-  title: string;
-  description: string;
   url: string;
+  wurl: string;
+  title: string;
+  imgurl: string;
+  tags: string;
+  description: string;
 };

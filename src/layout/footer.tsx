@@ -1,154 +1,74 @@
-import { useRouter } from 'next/router';
+import * as React from 'react';
 import NextLink from 'next/link';
-import { chakra, Stack, VStack, Divider, Link, Text } from '@chakra-ui/react';
-
 import {
-  TWITTER_PROFILE,
-  GITHUB_PROFILE,
-  YOUTUBE_CHANNEL,
-  POLYWORK_PROFILE,
-  TWITCH_CHANNEL,
-} from 'src/constants';
-import { Link as LinkType } from '@/types/link';
-import VercelCallout from '@/components/vercel-callout';
-
-const firstGroup: LinkType[] = [
-  {
-    href: '/',
-    label: 'Home',
-  },
-  {
-    href: '/blog',
-    label: 'Blog',
-  },
-  {
-    href: '/colophon',
-    label: 'Colophon',
-  },
-  {
-    href: '/talks',
-    label: 'Talks',
-  },
-  {
-    href: 'https://plausible.io/nikolovlazar.com',
-    label: 'Analytics',
-  },
-];
-
-const secondGroup = [
-  {
-    href: TWITTER_PROFILE,
-    label: 'Twitter',
-  },
-  {
-    href: GITHUB_PROFILE,
-    label: 'GitHub',
-  },
-  {
-    href: YOUTUBE_CHANNEL,
-    label: 'YouTube',
-  },
-  {
-    href: POLYWORK_PROFILE,
-    label: 'Polywork',
-  },
-  {
-    href: TWITCH_CHANNEL,
-    label: 'Twitch',
-  },
-];
-
-const thirdGroup = [
-  {
-    href: '/uses',
-    label: 'Uses',
-  },
-  {
-    href: '/gear',
-    label: 'Gear',
-  },
-  {
-    href: '/bookmarks',
-    label: 'Bookmarks',
-  },
-  {
-    href: '/books',
-    label: 'Books',
-  },
-  {
-    href: '/newsletter',
-    label: 'Newsletter',
-  },
-];
+  Container,
+  Box,
+  Link as ChakraLink,
+  SimpleGrid,
+  Stack,
+  Text,
+  Popover,
+  PopoverTrigger,
+  Portal,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverBody,
+  Link
+} from '@chakra-ui/react';
+import FooterSignup from '@/components/footer/signup';
+import { siteConfig } from '@/components/footer/site-config';
+// Here we have used react-icons package for the icons
+import { FaGithub, FaDev, FaLinkedin, FaQuora, FaTwitter } from 'react-icons/fa';
+import { NextURL } from 'next/dist/server/web/next-url';
 
 const Footer = () => {
-  const { pathname } = useRouter();
-
   return (
-    <VStack pb={8} spacing={8} as='footer' alignItems='flex-start'>
-      <Divider />
-      {/* <Stack
-        direction={{ base: 'column', md: 'row' }}
-        justifyContent='space-between'
-        w='full'
-        spacing={{ base: 2, md: 8 }}
+    <Container maxW="5xl" p={{ base: 5, md: 10 }}>
+      <SimpleGrid
+        flexDirection="column-reverse"
+        gridTemplateColumns={['1fr', '1fr', '1fr 1fr', '1fr 1fr']}
+        borderTopWidth={2}
+        mt="30px"
+        borderTopColor="gray.900"
+        pt="20px"
       >
-        <VStack alignItems='flex-start'>
-          {firstGroup.map(({ href, label }) => (
-            <NextLink key={href} href={href} passHref>
-              <Link
-                isExternal={href.startsWith('http')}
-                color={pathname === href ? 'purple.500' : 'gray.500'}
-              >
-                {label}
-              </Link>
-            </NextLink>
-          ))}
-        </VStack>
-        <VStack alignItems='flex-start'>
-          {secondGroup.map(({ href, label }) => (
-            <NextLink key={href} href={href} passHref>
-              <Link
-                isExternal={href.startsWith('http')}
-                target='_blank'
-                color='gray.500'
-              >
-                {label}
-              </Link>
-            </NextLink>
-          ))}
-        </VStack>
-        <VStack alignItems='flex-start'>
-          {thirdGroup.map(({ href, label }) => (
-            <NextLink key={href} href={href} passHref>
-              <Link
-                isExternal={href.startsWith('http')}
-                color={pathname === href ? 'purple.500' : 'gray.500'}
-              >
-                {label}
-              </Link>
-            </NextLink>
-          ))}
-        </VStack>
-      </Stack> */}
-      <Stack
-        w='full'
-        direction={{ base: 'column', md: 'row' }}
-        alignItems='center'
-        justifyContent={{ base: 'center', md: 'space-between' }}
-        spacing={0}
-        gridRowGap={4}
-      >
-        <Text color='gray.500'>
-          ©{' '}
-          <chakra.span as='time' color='purple.500'>
-            {new Date().getFullYear()}
-          </chakra.span>{' '}
-          Dzun Nurroin
-        </Text>
-        <VercelCallout />
-      </Stack>
-    </VStack>
+        <Box d={['block', 'block', 'none', 'none']} mb="30px">
+          <FooterSignup />
+        </Box>
+        <Box>
+          <SimpleGrid columns={[1, 1, 2, 2]}>
+            <Stack mb={['10px', '10px', 0, 0]}>
+              <Text as="span">
+                <NextLink href="#" > Contact Me</NextLink>
+              </Text>
+              <Text as="span">
+                <NextLink href="/faqs"  > FAQs</NextLink>
+              </Text>
+              <Text as="span">
+                <NextLink href="/testimonials" > Testimonials</NextLink>
+              </Text>
+            </Stack>
+            <Stack>
+             
+              <Text as="span">
+                <NextLink href="#" >Sponsor</NextLink>
+              </Text>
+              <Text as="span">
+                <NextLink href="#" > Contribute</NextLink>
+              </Text>
+            </Stack>
+          </SimpleGrid>
+          <Text mt="12px" color="gray.500">
+            Copyright 2022, All Rights Reserved.
+           
+          </Text>
+        </Box>
+        <Box d={['none', 'none', 'block', 'block']}>
+          <FooterSignup />
+        </Box>
+      </SimpleGrid>
+    </Container>
   );
 };
 

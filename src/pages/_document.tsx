@@ -34,7 +34,7 @@ export default class CustomDocument extends Document {
           <meta content="ie=edge" httpEquiv="X-UA-Compatible" />
           <script
             defer
-            data-domain="nikolovlazar.com"
+            data-domain="sarmadgardezi.com"
             src="https://plausible.io/js/plausible.js"
           />
           <meta name="monetization" content="$ilp.uphold.com/nZ4DF39aHkrm" />

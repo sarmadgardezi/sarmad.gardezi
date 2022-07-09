@@ -1,12 +1,15 @@
 import { Container, VStack } from "@chakra-ui/react";
+import Head from "next/head";
 import { PropsWithChildren } from "react";
 import Footer from "./footer";
 import Header from "./header";
-
 type Props = PropsWithChildren<{}>;
 
 const Layout = ({ children }: Props) => {
+
   return (
+
+
     <Container
       display="flex"
       maxW="container.md"

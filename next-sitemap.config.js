@@ -1,4 +1,4 @@
-const siteUrl = "https://www.sarmadgardezi.com";
+const siteUrl = "https://sarmadgardezi.com";
 
 module.exports = {
   siteUrl,
@@ -9,8 +9,7 @@ module.exports = {
       { userAgent: "*", allow: "/" },
     ],
     additionalSitemaps: [
-      `${siteUrl}/sitemap.xml`,
-      `${siteUrl}/server-sitemap.xml`,
+      `${siteUrl}/sitemap/sitemap-index.xml`,
     ],
   },
   exclude: ["/secret"],

@@ -9,3 +9,19 @@
   font-weight: 600;
   font-display: swap;
 }
+
+.Box {
+  width: 100%;
+}
+
+@media screen and (min-width: 30em) {
+  .Box {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .Box {
+    width: 25%;
+  }
+}

@@ -7,12 +7,13 @@ import {
   Icon,
   Link,
   Grid,
+  HStack,
 } from '@chakra-ui/react';
 import { FiArrowUpRight } from 'react-icons/fi';
 import HeroImage from './hero-image';
 import { Link as LinkType } from "@/types/link";
 import {
-  GITHUB_PROFILE, TWITCH_CHANNEL,
+  GITHUB_PROFILE, POLYWORK_PROFILE,
   TWITTER_PROFILE
 } from "src/constants";
 import ExternalLink from "../external-link";
@@ -29,10 +30,17 @@ const socialLinks: SocialLink[] = [
     href: GITHUB_PROFILE,
     label: "GitHub",
   },
+  {
+    href: POLYWORK_PROFILE,
+    label: 'Polywork',
+    color: 'purple.500',
+  },
  
 ];
 const Hero = () => {
   return (
+    <>
+    <HStack w='full' spacing={8}  align='flex-start'>
     <Stack
       as="section"
       alignItems="center"
@@ -49,7 +57,7 @@ const Hero = () => {
           spacing={3}
         >
           <Heading as="h1" size="lg">
-            Hi, I’m Sarmad Gardezi.
+            Hi, I’m Sarmad 👋
           </Heading>
         </Stack>
         <Text as="h2" lineHeight="175%">
@@ -87,6 +95,8 @@ const Hero = () => {
       </VStack>
       <HeroImage />
     </Stack>
+    </HStack>
+    </>
   );
 };
 

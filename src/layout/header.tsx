@@ -21,14 +21,14 @@ const Header = () => {
             About
           </MotionButton>
         </NextLink>
+        <NextLink href='/projects' passHref>
+          <MotionButton as={Link} size='sm' variant='ghost'>
+            Projects
+          </MotionButton>
+        </NextLink>
         <NextLink href='/writings' passHref>
           <MotionButton as={Link} size='sm' variant='ghost'>
             Writings
-          </MotionButton>
-        </NextLink>
-        <NextLink href='/bookmarks' passHref>
-          <MotionButton as={Link} size='sm' variant='ghost'>
-            Bookmark
           </MotionButton>
         </NextLink>
         <IconButton
