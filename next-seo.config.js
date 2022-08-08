@@ -1,42 +1,26 @@
-const title = "Sarmad Gardezi";
-const description = "Designer, tech enthusiast and entrepreneur from Islamabad, Pakistan";
-
-const image = {
-  images: {
-    domains: [
-      'img.youtube.com',
-      'sarmadgardeziblog.files.wordpress.com',
-    ],
-  },
- 
-};
-
-const SEO = {
-  title,
-  description,
-  titleTemplate: "Sarmad Gardezi - A Full Stack Developer",
-  defaultTitle: "Sarmad Gardezi",
-  canonical: "https://sarmadgardezi.com",
+/** @type {import('next-seo').DefaultSeoProps} */
+const defaultSEOConfig = {
+  title: "og-img",
+  titleTemplate: "%s | og-img",
+  defaultTitle: "og-img",
+  description: "OpenGgraph image serverless service",
+  canonical: "https://og.sznm.dev",
   openGraph: {
-    type: "website",
-    locale: "en_IE",
-    url: "https://sarmadgardezi.com",
-    title,
-    description,
+    url: "https://og.sznm.dev",
+    title: "og-img",
+    description: "OpenGgraph image serverless service",
     images: [
       {
-        url: "https://sarmadgardezi.com/static/images/banner.jpg",
-        alt: title,
-        width: 2240,
-        height: 1260,
+        url: "https://og-image.sznm.dev/**nextarter-chakra**.sznm.dev.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fsznm.dev%2Favataaars.svg&widths=250",
+        alt: "og-image",
       },
     ],
+    site_name: "og-img",
   },
   twitter: {
-    handle: "@SarmadGardezi",
-    site: "@sarmadgardezi",
+    handle: "@sozonome",
     cardType: "summary_large_image",
   },
 };
 
-export default SEO;
+export default defaultSEOConfig;
