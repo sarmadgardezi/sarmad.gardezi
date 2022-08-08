@@ -4,9 +4,9 @@ const defaultSEOConfig = {
   titleTemplate: "%s | og-img",
   defaultTitle: "og-img",
   description: "OpenGgraph image serverless service",
-  canonical: "https://og.sznm.dev",
+  canonical: "https://sarmad-gardezi.vercel.app",
   openGraph: {
-    url: "https://og.sznm.dev",
+    url: "https://sarmad-gardezi.vercel.app",
     title: "og-img",
     description: "OpenGgraph image serverless service",
     images: [

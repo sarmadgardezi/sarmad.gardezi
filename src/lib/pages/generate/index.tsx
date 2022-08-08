@@ -12,7 +12,7 @@ const Generate: NextPage = () => {
   const toast = useToast();
   const { watch, control, handleSubmit } = useForm<OgImageOption>();
   const [imgUrl, setImgUrl] = React.useState<string>(
-    "https://og.sznm.dev/api/generate?heading=Some-Title&text=some-description"
+    "https://sarmad-gardezi.vercel.app/api/generate?heading=Some-Title&text=some-description"
   );
 
   const values = watch();
