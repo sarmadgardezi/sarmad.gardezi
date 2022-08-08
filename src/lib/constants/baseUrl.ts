@@ -1,1 +1,1 @@
-export const baseUrl = `https://og.sznm.dev`;
+export const baseUrl = `https://sarmad-gardezi.vercel.app/`;
